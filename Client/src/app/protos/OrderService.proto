@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service OrderCheckService {
+	rpc MakeOrder(OrderItem) returns (OrderResponse);
+}
+message OrderItem {
+	int32 Id= 1;
+	int32 UserId= 2;
+	repeated ProductItem Items=3;
+}
+message ProductItem{
+	int32 Id =1;
+	int32 Quantity =2;
+	string Name =3;
+	double Price=4;
+}
+message OrderResponse {
+	bool isDone =1;
+}
