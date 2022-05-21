@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "PaymentService.Protos";
+  
+service PaymentService{
+	rpc PayHandler (PayMessage) returns (PayResponse);
+}
+message PayMessage {
+	int32 UserId= 1;
+	double OrderAmount= 2;
+}
+message PayResponse{
+	bool Status = 1;
+	string message = 2;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option csharp_namespace = "InentoryService.Protos";
+
+service InventoryService{
+	rpc checkItemAvaliabilty(ItemData) returns (ItemAValibleResponse);
+}
+message ItemData {
+	int32 ItemId= 1;
+	int32 ItemQuantity =2;
+}
+message ItemAValibleResponse {
+	bool isAvaliable = 1;
+}
