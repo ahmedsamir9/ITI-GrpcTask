@@ -1,6 +1,6 @@
 # ITI-GrpcTask
 Task for implement Grpc make some services communicate with each other then with Client (Angular)
-## Descritpion 
+## Description  
 - We have 2 services that help us in making order which were Payment service for check for User Payment and Inventory Service for check products availability
 
 [1] The First Part of task is to make EndPoint for Posting Order and Communicate with the 2 services via Rest
